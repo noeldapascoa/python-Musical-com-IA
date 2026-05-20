@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recomendador Musical com Engenharia de Prompts</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <section class="card">
+      <h1>Recomendador Musical com IA</h1>
+      <p>Agora com engenharia de prompts, modos de IA, proteção contra prompt injection e segunda API opcional.</p>
+
+      <label for="artistas">Artistas que você gosta</label>
+      <input id="artistas" placeholder="Ex: Matuê, Linkin Park, Jorge e Mateus" />
+
+      <label for="musicas">Músicas que você gosta</label>
+      <input id="musicas" placeholder="Ex: Numb, Anos Luz, Evidências" />
+
+      <div class="grid-campos">
+        <div>
+          <label for="modoIa">Modo da IA</label>
+          <select id="modoIa">
+            <option value="resumido">Resumido</option>
+            <option value="tecnico">Técnico</option>
+            <option value="professor">Professor</option>
+            <option value="detalhado">Detalhado</option>
+            <option value="suporte">Suporte técnico</option>
+          </select>
+        </div>
+        <div>
+          <label for="tipoPrompt">Tipo de prompt</label>
+          <select id="tipoPrompt">
+            <option value="simples">Simples</option>
+            <option value="estruturado" selected>Estruturado</option>
+            <option value="especializado">Especializado</option>
+          </select>
+        </div>
+      </div>
+
+      <label for="provedor">API de IA</label>
+      <select id="provedor">
+        <option value="auto">Automático: Gemini, depois segunda API</option>
+        <option value="gemini">Somente Gemini</option>
+        <option value="openai">Somente segunda API OpenAI</option>
+        <option value="comparar">Comparar Gemini + OpenAI</option>
+      </select>
+
+      <button id="btnRecomendar">Buscar recomendações</button>
+      <p id="status"></p>
+    </section>
+
+    <section class="card resultado-card">
+      <h2>Resultado</h2>
+      <div id="resultado">As recomendações vão aparecer aqui.</div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
